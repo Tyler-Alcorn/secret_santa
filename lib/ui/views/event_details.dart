@@ -28,7 +28,8 @@ class _EventDetailsState extends State<EventDetails>
   String? get expand => 'to';
 
   @override
-  String? get filter => "from = '${auth$()!.id}'";
+  String? get filter =>
+      "from = '${auth$()!.id}' && event_id = '${widget.event.id}'";
 
   @override
   Widget build(BuildContext context) {
